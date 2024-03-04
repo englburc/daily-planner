@@ -10,10 +10,10 @@ elPCurrentDay.text(dayjs().format("dddd, MMMM D"))
 
 // Present time blocks for standard business hours when the user scrolls down.
 $.each(timeSlots, function(i, t){
-    let row = $("<div class=´row´></div>");
-    let hour = $("<div class=´hour´></div>")
-    let description = $("<textarea class=´description´></textarea>")
-    let button = $("<div class=´button´></div>")
+    let row = $("<div>").addClass("row");
+    let hour = $("<div>").addClass("hour");
+    let description = $("<textarea>").addClass("description");
+    let button = $("<div>").addClass("button");
 
     hour.html("<br>" + t[0]);
     row.attr("data-time", t[1]);
