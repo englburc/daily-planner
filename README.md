@@ -24,4 +24,4 @@ The app wrks as follows:
 
 ## Visual 
 
-[Daily planner]("./assets/img/work-day-schedule_demo.gif")
+![Daily planner](./assets/img/Screenshot-daily-planner.png)
