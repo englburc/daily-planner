@@ -64,6 +64,9 @@ header {
     border-bottom-right-radius: 15px;
     background-color: #06aed5;
     color: white;
+    background-image: url("../img/save-icon.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 
 .button i:hover {
