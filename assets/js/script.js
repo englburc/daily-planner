@@ -50,3 +50,22 @@ elDivTimeblocks.on('click', '.button', function (e) {
 })
 
 // Persist events between refreshes of a page
+function update(e) {
+    $.each(timeSlots, function (i, t) {
+        const elHour = $(`.row[data-time=${t[1]}]`);
+        const tasksList = JSON.parse(localStorage.getItem("tasksList"));
+        const difference = t[1] - parseInt(dayjs().format("HH"));
+        elHour.children(".description").text(tasksList[t[1]]);
+        switch (difference) {
+            case 0:
+                elHour.addClass("present");
+                break;
+            case difference < 0:
+                elHour.removeClass("past")
+            default:
+                elHour.addClass("future");
+                break;
+        }
+    });
+}
+update();
